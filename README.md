@@ -28,3 +28,41 @@
 - Tree Shaking algorithm - remove unused code for you
 - Different dev and Prod bundles
 
+# Food App
+ *  Header 
+ *  - logo
+ *  - Nav Items
+ * Body
+ * - Search
+ * - RestaurantContainer
+ *  - Restaurant Cards
+    - images
+ * Footer
+ *  - Links
+ *  - Address
+ *  -Contact
+
+
+There are two types of Export/ Import
+
+- Default Export/Import
+
+export default Components/variables
+
+import component from "path";
+
+- named Export/Import
+
+export const component;
+import {component} from "path";
+
+
+# React Hooks 
+- Hooks is just a normal JS utility functions.
+- They are two types of Hooks 
+   * useState() - It uses for Super powerful State variable in React
+   Ex:-
+   * useEffect() -
+
+
+- When never State Variables update React triggers a reconciliation cycle(re-renders the component) 

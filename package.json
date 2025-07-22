@@ -2,8 +2,9 @@
   "name": "react-js-learning",
   "version": "1.0.0",
   "description": "This is reactjs learing by Sailu",
-  
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {
@@ -24,9 +25,7 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
-  
-    "browsersList": [
-      "Last 2 versions"
-    ]
-  
+  "browsersList": [
+    "Last 2 versions"
+  ]
 }
