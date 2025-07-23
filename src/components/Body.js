@@ -1,6 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 import { useState,useEffect } from "react";  
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const Body = () => {
 // local state variable 
@@ -15,6 +16,7 @@ const Body = () => {
     const fetchData = async() => {
         const data = await fetch(
             "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9628669&lng=77.57750899999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+            
         );
         const json = await data.json();
 
@@ -50,7 +52,7 @@ const Body = () => {
                 onClick={() => {
                     // filter logic here
                     const filteredList = listOfRestaurent.filter(
-                        (res) => res.avgRating > 4
+                        (res) => res.info?.avgRating > 4
                     );
                     setListOFRestaurent(filteredList);
                    
@@ -61,7 +63,11 @@ const Body = () => {
         < div className="res-container">            
             {
             filteredRestaurant.map((restaurant) => 
-              (<RestaurantCard key={restaurant.info.id} resData={restaurant.info} />
+              (
+              <Link key ={restaurant.info.id} to = { "/restaurants/" + restaurant.info.id }>
+
+                <RestaurantCard  resData={restaurant.info} />
+            </Link>
             ))
        
         }

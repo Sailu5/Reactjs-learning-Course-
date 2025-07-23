@@ -62,7 +62,14 @@ import {component} from "path";
 - They are two types of Hooks 
    * useState() - It uses for Super powerful State variable in React
    Ex:-
-   * useEffect() -
+   * useEffect() -it has two parameters those are 
+   callback function and optional arguments.
 
 
 - When never State Variables update React triggers a reconciliation cycle(re-renders the component) 
+
+
+# React Routing
+- they are two types of routing in web app
+   * client side routing - it can render only components inside the web app
+   * Server Side routing - it can reload an entire web app to enter into the next page or componenet
